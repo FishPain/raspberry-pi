@@ -1,6 +1,6 @@
 import os
 import time
-from datetime import date
+from datetime import datetime
 
 
 FRAME = 24
@@ -15,7 +15,7 @@ def take_photo(FRAME, date_time):
 def take_photos(MAX_TIME):
     count = 0
     while count < MAX_TIME:
-        take_photo(FRAME, date.today())
+        take_photo(FRAME, datetime.now())
         time.sleep(60)
         count += 1
 
