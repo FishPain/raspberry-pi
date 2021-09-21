@@ -7,7 +7,8 @@ FRAME = 24
 
 
 def take_photo(FRAME, date_time):
-    os.system(f"fswebcam -F {FRAME} -r 1280x720 --no-banner {date_time}.jpg")
+    command = 'fswebcam -F' + FRAME + '-r 1280x720 --no-banner' + date_time +'.jpg'
+    os.system(command)
 
 # a function that runs take_photo() every one hour
 def take_photos():
