@@ -12,5 +12,7 @@ def take_photo(FRAME, date_time):
 # a function that runs take_photo() every one hour
 def take_photos():
     while True:
-        take_photo(FRAME, date.today().strftime('%Y%m%d%H%M%S'))
+        take_photo(FRAME, str(date.today().strftime('%Y%m%d%H%M%S')))
         time.sleep(60)
+
+take_photos()
