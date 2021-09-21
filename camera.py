@@ -3,9 +3,9 @@ import time
 from datetime import datetime
 
 
-FRAME = 8 # frame rate
-INTERVAL = 15 # Take photos every x seconds
-MAX_TIME = 3  # Number of hours it need to run
+FRAME = 16 # frame rate
+INTERVAL = 3600 # Take photos every x seconds
+MAX_TIME = 504  # Number of hours it need to run
 
 
 def take_photo(FRAME, date_time):
