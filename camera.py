@@ -4,6 +4,7 @@ from datetime import date
 
 
 FRAME = 24
+MAX_TIME = 3
 
 
 def take_photo(FRAME, date_time):
@@ -11,9 +12,11 @@ def take_photo(FRAME, date_time):
     os.system(command)
 
 # a function that runs take_photo() every one hour
-def take_photos():
-    while True:
+def take_photos(MAX_TIME):
+    count = 0
+    while count < MAX_TIME:
         take_photo(FRAME, date.today())
         time.sleep(60)
+        count += 1
 
-take_photos()
+take_photos(MAX_TIME)
