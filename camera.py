@@ -16,7 +16,7 @@ def take_photo(FRAME, date_time):
 def take_photos(INTERVAL, MAX_TIME):
     count = 0
     while count < MAX_TIME:
-        take_photo(FRAME, datetime.now())
+        take_photo(FRAME, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         time.sleep(INTERVAL)
         count += 1
 
