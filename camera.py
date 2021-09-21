@@ -9,7 +9,7 @@ MAX_TIME = 3  # Number of hours it need to run
 
 
 def take_photo(FRAME, date_time):
-    command = 'fswebcam -F ' + str(FRAME) + '-r 1280x720 --no-banner ' + str(date_time) +'.jpg'
+    command = 'fswebcam -F ' + str(FRAME) + ' -r 1280x720 --no-banner ' + str(date_time) +'.jpg'
     os.system(command)
 
 # a function that runs take_photo() every one hour
